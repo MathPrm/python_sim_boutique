@@ -15,8 +15,29 @@ def main():
     if chaussettes_nombres > quantite_stock:
         raise Exception("La quantité de chaussettes souhaitées dépasse la limite des stocks diponibles, veuillez choisir un stock plus petit, ne vous en déplaise ! :D")
 
-    facture()
-
+    prix_ht: float = montant_ht(chaussettes_nombres)
+    prix_ttc: float = montant_ttc(prix_ht)
+    affichage_montant_ttc(prix_ttc)
+    qt_stock_dispo: int = quantite_stock_available(chaussettes_nombres)
+    debiter_compte_client(prix_ttc)
+    crediter_compte_boutique(prix_ttc)
+    bientot_rupture_stock(qt_stock_dispo, prix_ttc)
+    facture(chaussettes_nombres)
+    
+    print(f"{type(chaussettes_nombre)}")
+    print(f"{type(nom_boutique)}")
+    print(f"{type(produit)}")
+    print(f"{type(prix_unitaire)}")
+    print(f"{type(quantite_stock)}")
+    print(f"{type(tva)}")
+    print(f"{type(compte_client)}")
+    print(f"{type(compte_boutique)}")
+    print(f"{type(chaussettes_nombres)}")
+    print(f"{type(prix_ttc)}")
+    print(f"{type(prix_ht)}")
+    print(f"{type(qt_stock_dispo)}")
+    
+    
 # entry point
 if __name__ == "__main__":
     main()
