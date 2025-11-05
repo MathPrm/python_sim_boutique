@@ -55,3 +55,11 @@ def debiter_compte_client() -> float:
 def crediter_compte_boutique() -> float:
     somme_credite = montant_ttc
     return crediter_compte(somme_credite, compte_boutique)
+
+# stock soon to run out
+def bientot_rupture_stock() -> int:
+    if quantite_stock_available < 10:
+        return print("!! Stock bienôt épuisé !!")
+    elif 10 <quantite_stock_available() < 15 and prix_unitaire > 5:
+        print("!! Attention produit presque en ruptures !!")
+    return None
