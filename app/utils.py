@@ -21,3 +21,8 @@ def crediter_compte(somme_credite: float, compte_credite: float) -> float:
 # debit an account
 def debiter_compte(somme_debite: float, compte_debite: float) -> float:
     return compte_debite - somme_debite
+
+# price to type string
+def affichage_prix(number: float) -> str:
+    prix_str = str(number)
+    return f"{prix_str} €"
